@@ -41,7 +41,7 @@ Copy code
 ✅ Password Encryption using Bcrypt  
 ✅ Product: Create, Read, Update, Delete (CRUD) (Admin Only)  
 ✅ Add to Cart, View Cart, Remove from Cart  
-✅ Place Orders & View Orders (User/Admin with access control)  
+✅ View Orders
 ✅ Protected Routes using Middleware
 
 ---
