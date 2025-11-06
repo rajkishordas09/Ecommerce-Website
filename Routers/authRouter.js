@@ -29,7 +29,7 @@ authRouter.post("/login", async (req, res) => {
             return res.status(404).json({ message: "password is not matched" })
         }
         const token = jwt.sign(
-            { username: isUser.username, role: isUser.role },
+            { username: isUser.username, role: isUser.role, userID: isUser._id },
             'my_secret_rajkishordas09',
             { expiresIn: '1d' }
         )
