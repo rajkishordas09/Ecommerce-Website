@@ -10,6 +10,7 @@ const authN = (req, res, next) => {
         const decoded = jwt.verify(token, 'my_secret_rajkishordas09')
         req.username = decoded.username;
         req.role = decoded.role;
+        req.userID = decoded.userID;
         next()
     }
     catch (err) {
