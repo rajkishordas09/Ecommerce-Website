@@ -87,26 +87,28 @@ http://localhost:5000
 🔐 API Endpoints
 🔸 Auth Routes
 Method	Endpoint	Description
-POST	/auth/signup	User Registration
-POST	/auth/login	User Login
+POST	/signup	User Registration
+POST	/login	User Login
 
 🛍️ Product Routes
 Method	Endpoint	Description
 GET	/products	Get All Products
-POST	/products	Add Product (Admin Only)
-PUT	/products/:id	Update Product (Admin Only)
-DELETE	/products/:id	Delete Product (Admin Only)
+GET	/products/name/:name	Get All Products by name
+GET	/products/name/:productId	Get a Products by productId
+POST	/product	Add Product (Admin Only)
+PUT	/products/update/:id	Update Product (Admin Only)
+DELETE	/products/delete/:id	Delete Product (Admin Only)
 
 🛒 Cart Routes
 Method	Endpoint	Description
-POST	/cart/add	Add Product to Cart
+POST	/cart/add/:productId
 GET	/cart	View User Cart
-DELETE	/cart/:productId	Remove Item from Cart
+DELETE	/cart/delete/:productId	Remove Item from Cart
 
 📦 Order Routes
 Method	Endpoint	Description
-POST	/order/place	Place Order
-GET	/order	View Orders (User/Admin)
+GET	/order
+(View Orders)
 
 🧱 Folder Purpose Summary
 Folder/File	Description
