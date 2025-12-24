@@ -1,10 +1,17 @@
 const express = require('express');
+
+
+// ✅ Load & validate env (Zod) 
+require("./config/env.js");  //make sure to load env variables before anything else so make it top of the file
+
 const app = express();
 const Products = require("./Routers/ProductRouter")
 const signup = require('./Routers/authRouter');
 const cartRouter = require('./Routers/cartRouter');
 const orderRouter = require('./Routers/orderRouter')
-require("./db")
+
+
+// require("./db")//for mongose connection
 
 
 app.use(express.json())
@@ -16,5 +23,7 @@ app.use(orderRouter)
 
 
 
-const port = 3001;
-app.listen(port, () => console.log(`app is run at http://localhost:${port}`))
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
